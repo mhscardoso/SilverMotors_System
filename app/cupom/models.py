@@ -8,7 +8,7 @@ class Cupom(BaseModel):
     __tablename__ = "cupom"
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    desconto_carro = db.Column(db.Float)
-    desconto_moto = db.Column(db.Float)
+    desconto = db.Column(db.Float)
+    codigo = db.Column(db.String(10))
 
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
